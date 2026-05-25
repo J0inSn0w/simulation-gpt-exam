@@ -2,221 +2,297 @@
 
 **Maestría en Ciencia de Datos**  
 **Duración sugerida:** 50 minutos  
-**Instrucciones:** Resuelve cada ejercicio de forma clara y ordenada. Justifica tus respuestas. Puedes escribir tus procedimientos en forma algebraica y, cuando aplique, interpretar geométricamente el resultado.
+**Instrucciones:** Resuelve cada ejercicio de forma clara y ordenada. Justifica tus respuestas. Puedes escribir procedimientos algebraicos y, cuando aplique, interpretar geométricamente el resultado.
 
 ---
 
-## Parte I. Álgebra lineal
+# Parte I. Álgebra lineal
 
-### 1) Independencia lineal y combinación lineal
-Considere los vectores en \(\mathbb{R}^3\):
+---
 
-\[
- v_1 = \begin{bmatrix} 1 \\ 2 \\ -1 \end{bmatrix}, \quad
- v_2 = \begin{bmatrix} 2 \\ 1 \\ 0 \end{bmatrix}, \quad
- v_3 = \begin{bmatrix} 3 \\ 5 \\ -1 \end{bmatrix}
-\]
+## 1) Independencia lineal y combinación lineal
+
+Considere los vectores en R³:
+
+```text
+v1 = [ 1 ]
+     [ 2 ]
+     [-1 ]
+
+v2 = [ 2 ]
+     [ 1 ]
+     [ 0 ]
+
+v3 = [ 3 ]
+     [ 5 ]
+     [-1 ]
+```
 
 1. Verifique si los vectores son linealmente independientes.
-2. Si lo son, encuentre una combinación lineal de ellos que sea igual a \(\begin{bmatrix} 4 \\ 7 \\ -2 \end{bmatrix}\).
+
+2. Si lo son, encuentre una combinación lineal de ellos que sea igual a:
+
+```text
+[ 4 ]
+[ 7 ]
+[-2 ]
+```
+
 3. Si no lo son, encuentre una combinación lineal que dé como resultado el vector cero.
 
 ---
 
-### 2) Producto punto, norma y ortogonalidad
-Sean
+## 2) Producto punto, norma y ortogonalidad
 
-\[
- u = \begin{bmatrix} 1 \\ -2 \\ 2 \end{bmatrix}, \quad
- w = \begin{bmatrix} 2 \\ 1 \\ 0 \end{bmatrix}
-\]
+Sean:
 
-1. Calcule \(u \cdot w\).
+```text
+u = [ 1 ]
+    [-2 ]
+    [ 2 ]
+
+w = [ 2 ]
+    [ 1 ]
+    [ 0 ]
+```
+
+1. Calcule el producto punto u · w.
+
 2. Determine si los vectores son ortogonales.
-3. Calcule \(\|u\|\).
+
+3. Calcule la norma de u.
 
 ---
 
-### 3) Matrices y multiplicación
-Sean
+## 3) Matrices y multiplicación
 
-\[
-A = \begin{bmatrix} 1 & 2 \\ 0 & -1 \end{bmatrix}, \quad
-B = \begin{bmatrix} 3 & 1 \\ 4 & 2 \end{bmatrix}
-\]
+Sean:
 
-1. Calcule \(A + B\).
-2. Calcule \(AB\).
-3. Calcule \(BA\) y compare el resultado con \(AB\).
+```text
+A = [ 1   2 ]
+    [ 0  -1 ]
+
+B = [ 3   1 ]
+    [ 4   2 ]
+```
+
+1. Calcule A + B.
+
+2. Calcule AB.
+
+3. Calcule BA y compare el resultado con AB.
 
 ---
 
-### 4) Matriz transpuesta e interpretación
-Sea
+## 4) Matriz transpuesta e interpretación
 
-\[
-C = \begin{bmatrix}
-1 & 0 & 2 \\
--1 & 3 & 1
-\end{bmatrix}
-\]
+Sea:
 
-1. Encuentre \(C^T\).
-2. Determine las dimensiones de \(C\) y \(C^T\).
+```text
+C = [  1   0   2 ]
+    [ -1   3   1 ]
+```
+
+1. Encuentre la transpuesta de C.
+
+2. Determine las dimensiones de C y de Cᵀ.
+
 3. Explique qué cambia al transponer una matriz.
 
 ---
 
-### 5) Sistema de ecuaciones lineales
-Considere la matriz de coeficientes
+## 5) Sistema de ecuaciones lineales
 
-\[
-M = \begin{bmatrix}
-1 & 1 & 1 \\
-2 & 1 & 3 \\
-1 & 2 & 4
-\end{bmatrix}
-\]
+Considere:
 
-y el vector de términos independientes
+```text
+M = [ 1   1   1 ]
+    [ 2   1   3 ]
+    [ 1   2   4 ]
+```
 
-\[
-b = \begin{bmatrix} 3 \\ 7 \\ 8 \end{bmatrix}
-\]
+y
 
-1. Escriba el sistema de ecuaciones asociado a \(Mx=b\).
-2. Determine si el sistema tiene solución única, infinitas soluciones o ninguna solución.
+```text
+b = [ 3 ]
+    [ 7 ]
+    [ 8 ]
+```
+
+1. Escriba el sistema de ecuaciones asociado a Mx = b.
+
+2. Determine si el sistema tiene:
+- solución única
+- infinitas soluciones
+- ninguna solución
+
 3. Justifique su respuesta.
 
 ---
 
-### 6) Inversa y determinante
-Sea
+## 6) Inversa y determinante
 
-\[
-D = \begin{bmatrix}
-2 & 1 \\
-5 & 3
-\end{bmatrix}
-\]
+Sea:
 
-1. Calcule \(\det(D)\).
-2. Determine si \(D\) es invertible.
-3. Si existe, calcule \(D^{-1}\).
+```text
+D = [ 2   1 ]
+    [ 5   3 ]
+```
+
+1. Calcule det(D).
+
+2. Determine si D es invertible.
+
+3. Si existe, calcule D⁻¹.
 
 ---
 
-### 7) Rank e imagen de una transformación
-Sea la matriz
+## 7) Rango e imagen de una transformación
 
-\[
-E = \begin{bmatrix}
-1 & 2 & 3 \\
-2 & 4 & 6 \\
-0 & 1 & 1
-\end{bmatrix}
-\]
+Sea:
 
-1. Determine el rango de \(E\).
+```text
+E = [ 1   2   3 ]
+    [ 2   4   6 ]
+    [ 0   1   1 ]
+```
+
+1. Determine el rango de E.
+
 2. Describa la dimensión del espacio columna.
-3. Interprete geométricamente la imagen de la transformación lineal asociada a \(E\).
+
+3. Interprete geométricamente la imagen de la transformación lineal asociada a E.
 
 ---
 
-### 8) Autovalores y autovectores
-Sea
+## 8) Autovalores y autovectores
 
-\[
-F = \begin{bmatrix}
-4 & 1 \\
-1 & 4
-\end{bmatrix}
-\]
+Sea:
 
-1. Encuentre los autovalores de \(F\).
+```text
+F = [ 4   1 ]
+    [ 1   4 ]
+```
+
+1. Encuentre los autovalores de F.
+
 2. Encuentre un autovector asociado a cada autovalor.
-3. Determine si \(F\) es diagonalizable.
+
+3. Determine si F es diagonalizable.
 
 ---
 
-## Parte II. Optimización
+# Parte II. Optimización
 
-### 9) Sucesiones
-Considere la sucesión
+---
 
-\[
-a_n = \frac{(-1)^n}{n}
-\]
+## 9) Sucesiones
+
+Considere la sucesión:
+
+```text
+a_n = ((-1)^n)/n
+```
 
 1. Determine si la sucesión está acotada.
+
 2. Determine si converge.
+
 3. Encuentre su límite si existe.
 
 ---
 
-### 10) Máximos y mínimos en un conjunto
-Sea la función
+## 10) Máximos y mínimos
 
-\[
-f(x,y) = x^2 + y^2 - 2x - 4y
-\]
+Sea:
 
-definida sobre el cuadrado
+```text
+f(x,y) = x² + y² - 2x - 4y
+```
 
-\[
-D = \{(x,y) \in \mathbb{R}^2 : 0 \le x \le 3,\ 0 \le y \le 4\}
-\]
+definida sobre:
 
-1. Encuentre los puntos críticos de \(f\).
-2. Determine el mínimo y el máximo de \(f\) sobre \(D\).
+```text
+D = { (x,y) : 0 ≤ x ≤ 3, 0 ≤ y ≤ 4 }
+```
+
+1. Encuentre los puntos críticos de f.
+
+2. Determine el mínimo y máximo de f sobre D.
+
 3. Indique en qué puntos se alcanzan.
 
 ---
 
-### 11) Gradiente y derivada direccional
-Sea
+## 11) Gradiente y derivada direccional
 
-\[
-g(x,y) = x^2y + y^3
-\]
+Sea:
 
-1. Calcule \(\nabla g(x,y)\).
-2. Calcule la derivada direccional de \(g\) en el punto \((1,1)\) en la dirección del vector \(v = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\).
-3. Interprete el resultado geométricamente.
+```text
+g(x,y) = x²y + y³
+```
 
----
+1. Calcule grad g(x,y).
 
-### 12) Hessiana y clasificación de puntos críticos
-Sea
+2. Calcule la derivada direccional de g en el punto (1,1) en la dirección:
 
-\[
-h(x,y) = x^4 - 4x^2 + y^4 - 2y^2
-\]
+```text
+v = [ 3 ]
+    [ 4 ]
+```
 
-1. Calcule la matriz Hessiana de \(h\).
-2. Encuentre los puntos críticos de \(h\).
-3. Clasifique cada punto crítico como máximo local, mínimo local o punto silla.
+3. Interprete geométricamente el resultado.
 
 ---
 
-## Pregunta extra integradora
+## 12) Hessiana y clasificación de puntos críticos
 
-### 13) Interpretación geométrica de una transformación
-Sea \(T:\mathbb{R}^2 \to \mathbb{R}^2\) dada por
+Sea:
 
-\[
-T(x) = Ax, \quad A = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}
-\]
+```text
+h(x,y) = x⁴ - 4x² + y⁴ - 2y²
+```
 
-1. Describa el efecto geométrico de \(T\).
-2. ¿Qué le ocurre a la norma de un vector bajo esta transformación?
+1. Calcule la matriz Hessiana de h.
+
+2. Encuentre los puntos críticos de h.
+
+3. Clasifique cada punto crítico como:
+- máximo local
+- mínimo local
+- punto silla
+
+---
+
+# Pregunta extra integradora
+
+---
+
+## 13) Interpretación geométrica de una transformación
+
+Sea la transformación:
+
+```text
+T(x) = Ax
+```
+
+donde:
+
+```text
+A = [ 0  -1 ]
+    [ 1   0 ]
+```
+
+1. Describa el efecto geométrico de T.
+
+2. ¿Qué ocurre con la norma de un vector bajo esta transformación?
+
 3. ¿Qué relación tiene esta matriz con una rotación?
 
 ---
 
-## Indicaciones para autoevaluarte
+# Indicaciones para autoevaluarte
 
 - Si dominas del 1 al 8, tienes buena base de álgebra lineal.
 - Si dominas del 9 al 12, estás bien preparado en optimización.
-- Si resuelves la 13 con interpretación clara, tienes nivel muy competitivo para el examen.
-
+- Si resuelves la 13 con interpretación clara, tienes un nivel competitivo para el examen.
